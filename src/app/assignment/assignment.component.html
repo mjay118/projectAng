@@ -3,6 +3,7 @@
     <body>
 <p>assignment works!</p>
 
+
 <table  border="1" bordercolor="red">
     <tr>
         <th>Id</th>
@@ -13,10 +14,56 @@
         <th>Access Colour</th>
     </tr>
     <tr *ngFor="let emp of employees" [ngSwitch]="emp.roles" >
-        <td>{{emp.id}}</td>
-        <td>{{emp.name}}</td>
-        <td>{{emp.age}}</td>
-        <td>{{emp.roles}}</td>
+        
+        <td class="yellow" *ngSwitchCase="'Developer'">
+            <span>{{emp.id}}</span>
+        </td>
+        <td class="yellow" *ngSwitchCase="'Developer'">
+            <span>{{emp.name}}</span>
+        </td>
+        <td class="yellow" *ngSwitchCase="'Developer'">
+            <span>{{emp.age}}</span>
+        </td>
+        <td class="yellow" *ngSwitchCase="'Developer'">
+            <span>{{emp.roles}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin'">
+            <span>{{emp.id}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin'">
+            <span>{{emp.name}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin'">
+            <span>{{emp.age}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin'">
+            <span>{{emp.roles}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin,HR'">
+            <span>{{emp.id}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin,HR'">
+            <span>{{emp.name}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin,HR'">
+            <span>{{emp.age}}</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin,HR'">
+            <span>{{emp.roles}}</span>
+        </td>
+        <td class="red" *ngSwitchCase="'HR'">
+            <span>{{emp.id}}</span>
+        </td>
+        <td class="red" *ngSwitchCase="'HR'">
+            <span>{{emp.name}}</span>
+        </td>
+        <td class="red" *ngSwitchCase="'HR'">
+            <span>{{emp.age}}</span>
+        </td>
+        <td class="red" *ngSwitchCase="'HR'">
+            <span>{{emp.roles}}</span>
+        </td>
+        
         <td class="yellow" *ngSwitchCase="'Developer'">
             <span>General Access</span>
         </td>
@@ -44,6 +91,7 @@
         <td class="green" *ngSwitchCase="'HR,Admin'">
             <span>Green</span>
         </td>
+        
     </tr>
 </table>
 </body>
