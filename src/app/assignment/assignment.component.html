@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<p>assignment works!</p>
+<label>Name</label>
+ 
+        <input type="text" name="name" ng-model="emp.name"/>
+ 
+        <label>Age</label>
+ 
+        <input type="text" name="age" ng-model="emp.age"/>
+ 
+        <label>Roles.</label>
+ 
+        <input type="text" name="roles" ng-model="emp.roles"/>
+ 
+         
+ 
+        <input type="hidden" ng-model="emp.id" />
+ 
+        <input type="button" value="Save" ng-click="saveRecord()" />
+
+<table  border="1" bordercolor="red">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Roles</th>
+        <th>Access</th>
+        <th>Access Colour</th>
+    </tr>
+    <tr *ngFor="let emp of employees" [ngSwitch]="emp.roles" >
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.roles}}</td>
+        <td class="yellow" *ngSwitchCase="'Developer'">
+            <span>General Access</span>
+        </td>
+        <td class="red" *ngSwitchCase="'HR'">
+            <span>HR Access</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin'">
+            <span>Admin Access</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin,HR'">
+            <span>All Access</span>
+        </td>
+        <td class="yellow" *ngSwitchCase="'Developer'">
+            <span>Yellow</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin'">
+            <span>Green</span>
+        </td>
+        <td class="red" *ngSwitchCase="'HR'">
+            <span>Red</span>
+        </td>
+        <td class="green" *ngSwitchCase="'Admin,HR'">
+            <span>Green</span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
