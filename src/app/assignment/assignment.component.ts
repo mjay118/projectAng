@@ -33,9 +33,6 @@ export class AssignmentComponent implements OnInit {
       roles:['Admin','HR'],
     },
   ]
-  //comment
-  //c2
-  //c3
   
   constructor() { }
 

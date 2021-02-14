@@ -2,23 +2,6 @@
 <html>
     <body>
 <p>assignment works!</p>
-<label>Name</label>
- 
-        <input type="text" name="name" ng-model="emp.name"/>
- 
-        <label>Age</label>
- 
-        <input type="text" name="age" ng-model="emp.age"/>
- 
-        <label>Roles.</label>
- 
-        <input type="text" name="roles" ng-model="emp.roles"/>
- 
-         
- 
-        <input type="hidden" ng-model="emp.id" />
- 
-        <input type="button" value="Save" ng-click="saveRecord()" />
 
 <table  border="1" bordercolor="red">
     <tr>
@@ -56,6 +39,9 @@
             <span>Red</span>
         </td>
         <td class="green" *ngSwitchCase="'Admin,HR'">
+            <span>Green</span>
+        </td>
+        <td class="green" *ngSwitchCase="'HR,Admin'">
             <span>Green</span>
         </td>
     </tr>
