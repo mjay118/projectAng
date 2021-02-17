@@ -7,13 +7,15 @@ import { TestComponent } from './test/test.component';
 import { HomeComponent } from './home/home.component';
 
 import { AssignmentComponent } from './assignment/assignment.component';
+import { EmpDetailComponent } from './emp-detail/emp-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     HomeComponent,
-    AssignmentComponent
+    AssignmentComponent,
+    EmpDetailComponent
   ],
   imports: [
     BrowserModule,

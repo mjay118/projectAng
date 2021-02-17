@@ -5,9 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MRITYUNJAY IS BACK';
-  name = 'Angular';
-  age = 55;
-  num = 999;
-  yr = 'years';
+  empl={
+    id:2,
+  };
 }

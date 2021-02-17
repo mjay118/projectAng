@@ -1,0 +1,27 @@
+h2{
+    text-align: center;
+    color: brown;
+}
+table{
+    margin-left: 42%;   
+ }
+h4{
+    text-align: center;
+    color: blue;  
+}
+
+ul{
+    background-color: pink;
+    margin-left: -1%;
+    margin-right: -1%;
+    padding: 0;
+    display: flex;
+}
+li{
+    list-style-type: none;
+    padding: 1%;
+}
+a{
+    text-decoration: none;
+    padding:1%
+}

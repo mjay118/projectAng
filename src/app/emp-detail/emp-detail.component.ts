@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 @Component({
-  selector: 'app-assignment',
-  templateUrl: './assignment.component.html',
-  styleUrls: ['./assignment.component.css']
+  selector: 'app-emp-detail',
+  templateUrl: './emp-detail.component.html',
+  styleUrls: ['./emp-detail.component.css']
 })
-export class AssignmentComponent implements OnInit {
-
+export class EmpDetailComponent implements OnInit {
   employees=[
     {
       id:1,
@@ -39,32 +38,16 @@ export class AssignmentComponent implements OnInit {
       roles:['HR'],
     },
   ]
-
-// ename='';
-// eage='';
-// eroles='';
-//   employees:any = [];
-
-
-
-  
-
+  filteredEmp: any;
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(data=>{
-    })
+    this.route.params.subscribe(data=>
+      {
+        this.filteredEmp=this.employees.filter((emp)=>{
+          return emp.id === Number(data.id);
+        });
+      });
   }
-  // addEmployee() {
-    
-  //   let empObj:any = {
-  //     name: this.ename,
-  //     age: this.eage,
-  //     roles: this.eroles,
-  //     id: this.employees.length + 1,
-  //   };
-    
-  //    this.employees.push(empObj);
 
-  // }
 }

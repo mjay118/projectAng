@@ -3,7 +3,7 @@
 
 <body>
     <p>Assignment</p><br><br>
-    <form >
+    <!-- <form >
         <label>Name</label><br><br>
 
         <input type="text" [(ngModel)]="ename" name="ename"/><br><br>
@@ -18,7 +18,7 @@
 
         <input type="button" value="Save" (click)="addEmployee()" />
 
-    </form><br><br>
+    </form><br><br> -->
     
     <table border="1" bordercolor="red">
         <tr>
@@ -28,6 +28,7 @@
             <th>Roles</th>
             <th>Access</th>
             <th>Access Colour</th>
+            <th>Details</th>
         </tr>
         <tr *ngFor="let emp of employees" [ngSwitch]="emp.roles">
 
@@ -107,6 +108,7 @@
             <td class="green" *ngSwitchCase="'HR,Admin'">
                 <span>Green</span>
             </td>
+            <td><span><a [routerLink]="['/emp-detail',emp.id]">Get Details</a></span></td>
 
         </tr>
     </table>

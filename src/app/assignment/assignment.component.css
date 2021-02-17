@@ -13,6 +13,10 @@
 form{
     text-align: center;
 }
+table{
+    margin-left: 38%;
+    margin-right: 38%;
+}
 p{
     text-align: center;
     color:blue;
