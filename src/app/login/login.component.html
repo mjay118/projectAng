@@ -1,0 +1,20 @@
+<p>login works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <form >
+            <div class="form-group">
+              <label >Email:</label>
+              <input type="email" [(ngModel)]="email"  name="email" class="form-control" >
+            </div>
+            <div class="form-group">
+              <label >Password:</label>
+              <input type="password" [(ngModel)]="password"  name="password" class="form-control" >
+            </div>
+            
+              <span>Not Registered Yet? <a routerLink="/signup">Signup Here</a></span><br><br>
+         <div class="form-group"id="b">
+            <button type="submit"  class="btn btn-danger" (click)="login()">Login</button>
+        </div>
+          </form>
+    </div>
+</div>

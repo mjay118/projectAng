@@ -10,18 +10,4 @@ h4{
     color: blue;  
 }
 
-ul{
-    background-color: pink;
-    margin-left: -1%;
-    margin-right: -1%;
-    padding: 0;
-    display: flex;
-}
-li{
-    list-style-type: none;
-    padding: 1%;
-}
-a{
-    text-decoration: none;
-    padding:1%
-}
+

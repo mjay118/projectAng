@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 
 import { AssignmentComponent } from './assignment/assignment.component';
 import { EmpDetailComponent } from './emp-detail/emp-detail.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { EmpDetailComponent } from './emp-detail/emp-detail.component';
     TestComponent,
     HomeComponent,
     AssignmentComponent,
-    EmpDetailComponent
+    EmpDetailComponent,
+    SignupComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
